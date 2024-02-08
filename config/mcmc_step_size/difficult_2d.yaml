@@ -1,0 +1,4 @@
+_target_: pdds.utils.step_size_schedules.LinearStepSizeScheduler
+step_sizes: [0.0, 0.0, 0.0, 0.0] # NOTE: currently not tuned
+step_times: [0, 0.5, 0.75, 1.0]
+t_f: ${t_f}

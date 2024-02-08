@@ -1,0 +1,4 @@
+_target_: optax.exponential_decay
+init_value: ${optim.lr}
+transition_steps: 50
+decay_rate: ${optim.decay_rate}

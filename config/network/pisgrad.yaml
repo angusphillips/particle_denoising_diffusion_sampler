@@ -1,0 +1,3 @@
+_target_: pdds.nn_models.mlp.PISGRADNet
+hidden_shapes: [64,64]
+act: gelu

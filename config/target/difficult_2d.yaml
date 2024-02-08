@@ -1,0 +1,3 @@
+_target_: pdds.distributions.ChallengingTwoDimensionalMixture
+dim: ${dim}
+is_target: True

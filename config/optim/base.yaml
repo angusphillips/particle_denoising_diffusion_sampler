@@ -1,0 +1,12 @@
+# optim:
+lr: 1e-3
+decay_rate: 0.95
+num_steps: 20_000
+ema_rate: 0.999
+batch_size: 300
+likelihood_weight: False
+num_mc_samples: 100
+sample_lbd: False
+refresh_batch_every: 100 # must be smaller or equal refresh_model_every and small enough that the samples fit into memory
+refresh_model_every: 10000
+retrain_from_scratch: False

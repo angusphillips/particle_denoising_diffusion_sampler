@@ -1,0 +1,2 @@
+_target_: pdds.potentials.NaivelyApproximatedPotential
+dim: ${dim}

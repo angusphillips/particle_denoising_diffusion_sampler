@@ -1,0 +1,7 @@
+wandb:
+  _target_: pdds.utils.loggers_pl.WandbLogger
+  name: ${hydra:job.override_dirname}
+  group: ${group}
+  entity: # add your wandb entity
+  project: ${PROJECT_NAME}
+  offline: False

@@ -1,0 +1,5 @@
+_target_: pdds.sde.LinearScheduler
+t_0: ${t_0}
+t_f: ${t_f}
+beta_0: ${beta_0}
+beta_f: ${beta_f}

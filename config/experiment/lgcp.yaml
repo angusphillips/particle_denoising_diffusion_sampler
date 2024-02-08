@@ -1,0 +1,40 @@
+# @package _global_
+
+name: lgcp
+defaults:
+  - /target: lgcp
+  - /log_g0: ratio
+  - /potential: approx
+  - /scheduler: cosine
+  - /optim: lgcp
+  - /vi_optim: base
+  - /mcmc_step_size: lgcp
+
+has_ground_truth: False
+use_vi_approx: True
+loss: guidance
+
+base_steps: 8
+
+# SDE settings
+sigma: 1.0
+t_0: 0.0
+t_f: 1.0
+beta_0: 0.001
+beta_f: 5.0
+alpha_max: 1.0
+
+# target distribution parameters
+dim: 1600
+use_whitened: False
+
+# SMC settings
+num_steps: 100
+num_particles: 2000
+ess_threshold: 0.3
+num_mcmc_steps: 0
+
+# Plot settings
+plot_target: False
+univariate_plot_dims: [0]
+bivariate_plot_dims: [[0,1]]

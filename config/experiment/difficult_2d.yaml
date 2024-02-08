@@ -1,0 +1,39 @@
+# @package _global_
+
+name: difficult_2d
+defaults:
+  - /target: difficult_2d
+  - /log_g0: ratio
+  - /potential: approx
+  - /scheduler: cosine
+  - /optim: difficult_2d
+  - /vi_optim: base
+  - /mcmc_step_size: difficult_2d
+
+has_ground_truth: True
+use_vi_approx: True
+loss: guidance
+
+base_steps: 1
+
+# Target parameters
+dim: 2
+
+# SDE settings
+sigma: 1.0
+t_0: 0.0
+t_f: 1.0
+beta_0: 0.001
+beta_f: 12.0
+alpha_max: 1.0
+
+# SMC settings
+num_steps: 3
+num_particles: 2000
+ess_threshold: 0.3
+num_mcmc_steps: 0
+
+# Plot settings
+plot_target: True
+univariate_plot_dims: [0]
+bivariate_plot_dims: [[0,1]]

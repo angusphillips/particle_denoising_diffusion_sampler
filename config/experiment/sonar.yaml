@@ -1,0 +1,38 @@
+# @package _global_
+
+name: sonar
+defaults:
+  - /target: sonar
+  - /log_g0: ratio
+  - /potential: approx
+  - /scheduler: cosine
+  - /optim: sonar
+  - /vi_optim: base
+  - /mcmc_step_size: sonar
+
+has_ground_truth: False
+use_vi_approx: True
+loss: guidance
+
+base_steps: 2
+
+# SDE settings
+sigma: 1.0
+t_0: 0.0
+t_f: 1.0
+beta_0: 0.001
+beta_f: 5.0
+alpha_max: 1.0
+# target distribution parameters
+dim: 61
+
+# SMC settings
+num_steps: 10
+num_particles: 2000
+ess_threshold: 0.3
+num_mcmc_steps: 0
+
+# Plot settings
+plot_target: False
+univariate_plot_dims: [0]
+bivariate_plot_dims: [[0,1]]

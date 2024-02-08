@@ -1,0 +1,5 @@
+_target_: pdds.distributions.LogGaussianCoxPines
+file_path: '${data_dir}/fpines.csv'
+use_whitened: ${use_whitened}
+dim: ${dim}
+is_target: True

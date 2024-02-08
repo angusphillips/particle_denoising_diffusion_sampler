@@ -1,0 +1,6 @@
+_target_: optax.warmup_cosine_decay_schedule
+init_value: ${eval:${optim.lr}/100}
+peak_value: ${optim.lr}
+warmup_steps: 1000
+decay_steps: ${optim.num_steps}
+end_value: ${eval:${optim.lr}/100}

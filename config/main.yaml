@@ -1,0 +1,36 @@
+# @package _global_
+
+PROJECT_NAME: pdds
+
+defaults:
+  - _self_
+
+  - server: local
+  - logging: csv
+
+  - experiment: difficult_gaussian
+  - network: pisgrad
+  - lr_schedule: exp_decay
+  - vi_lr_schedule: constant
+
+  - override hydra/hydra_logging: colorlog
+  - override hydra/job_logging: colorlog
+
+make_logs: True
+
+seed: 0
+
+steps_mult: 1
+
+work_dir: ${hydra:runtime.cwd}
+ckpt_dir: ckpt
+data_dir: ${work_dir}/data
+group: ${name}
+
+mode: train
+plot_train: True # turn off for faster training
+eval_train: True # leave on to get normalising constant estimates after every iteration of PDDS
+logZ_train: False # turn on to get normalising constant estimate every training iteration
+logZ_log_freq: 1
+progress_bars: True
+num_smc_iters: 100 # Number of evaluation seeds for normalising constant estimates

@@ -1,0 +1,33 @@
+# --find-links https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+# jax[cuda11_cudnn86] 
+
+tensorflow
+tensorflow-probability
+torch
+numpyro
+inference_gym
+diffrax
+dm-haiku
+optax
+equinox
+
+tqdm
+matplotlib
+seaborn
+
+jaxtyping
+chex
+check_shapes
+fsspec
+
+gpustat
+wandb
+hydra_core==1.1.1
+hydra_colorlog==1.1
+hydra-joblib-launcher==1.1.5
+submitit
+hydra-submitit-launcher
+
+black
+ipykernel
+ipywidgets

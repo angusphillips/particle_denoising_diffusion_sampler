@@ -1,0 +1,5 @@
+_target_: pdds.distributions.NormalDistributionWrapper
+mean: ${target_loc}
+scale: ${target_scale}
+dim: ${dim}
+is_target: True

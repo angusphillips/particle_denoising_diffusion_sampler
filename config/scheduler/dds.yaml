@@ -1,0 +1,6 @@
+_target_: pdds.sde.DDSScheduler
+t_0: ${t_0}
+t_f: ${t_f}
+num_steps: ${num_steps}
+alpha_max: ${alpha_max}
+# s: ${s}

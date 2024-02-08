@@ -1,0 +1,4 @@
+defaults:
+  - base
+
+refresh_batch_every: 60

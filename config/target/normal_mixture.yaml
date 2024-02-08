@@ -1,0 +1,6 @@
+_target_: pdds.distributions.NormalMixtureDistribution
+means: ${means}
+scales: ${scales}
+weights: ${weights}
+dim: ${dim}
+is_target: True

@@ -1,0 +1,26 @@
+num_workers: 8
+
+paths:
+  experiments: results
+
+hydra:
+  sweep:
+    dir: ./${paths.experiments}/${group}/${hydra.job.override_dirname}/seed=${seed}
+  run:
+    dir: ./${paths.experiments}/${group}/${hydra.job.override_dirname}/seed=${seed}
+
+  job:
+    config:
+      override_dirname:
+        exclude_keys: [name, group, server, seed, mode, logging, n_jobs, eval_train, plot_train, save_samples]
+
+  job_logging:
+    formatters:
+      simple:
+        format: '[%(levelname)s] - %(message)s'
+    handlers:
+      file:
+        filename: run.log
+    root:
+      handlers: [console, file]
+

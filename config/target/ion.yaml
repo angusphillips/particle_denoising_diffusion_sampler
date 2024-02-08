@@ -1,0 +1,3 @@
+_target_: pdds.distributions.BayesianLogisticRegression
+file_path: '${data_dir}/ionosphere_full.pkl'
+is_target: True

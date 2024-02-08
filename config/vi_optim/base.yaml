@@ -1,0 +1,4 @@
+lr: 1e-3
+num_steps: 20_000
+ema_rate: 0.999
+batch_size: 512
