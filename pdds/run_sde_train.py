@@ -50,6 +50,7 @@ from pdds.ml_tools.state import (
 )
 from pdds import ml_tools
 from pdds.smc_loops import outer_loop_smc, fast_outer_loop_smc
+from pdds.resampling import resampler
 from pdds.distributions import (
     WhitenedDistributionWrapper,
 )
@@ -510,10 +511,15 @@ def run(cfg: DictConfig):
             if (
                 step - 1
             ) % refresh_batch_every == 0:  # refresh samples after every 'epoch'
+                key, subkey1, subkey2 = jax.random.split(key, 3)
                 jit_results, density_state_training = training_sampler(
-                    rng=key, density_state=density_state_training
+                    rng=subkey1, density_state=density_state_training
                 )
-                sample_batches = jit_results["samples"].reshape(
+                sample_batches = resampler(
+                    rng=subkey2,
+                    samples=jit_results["samples"],
+                    log_weights=jit_results["log_weights"],
+                )["samples"].reshape(
                     (refresh_batch_every, cfg.optim.batch_size, cfg.dim)
                 )
 
