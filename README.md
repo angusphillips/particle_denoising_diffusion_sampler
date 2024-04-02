@@ -46,5 +46,12 @@ Further arguments can be explored in the config files.
 ## Cite
 If you use this code in your work, please cite our paper:
 ```
-add citation...
+@misc{phillips2024particle,
+      title={Particle Denoising Diffusion Sampler}, 
+      author={Angus Phillips and Hai-Dang Dau and Michael John Hutchinson and Valentin De Bortoli and George Deligiannidis and Arnaud Doucet},
+      year={2024},
+      eprint={2402.06320},
+      archivePrefix={arXiv},
+      primaryClass={stat.ML}
+}
 ```
